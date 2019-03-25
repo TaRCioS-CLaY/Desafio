@@ -1,21 +1,20 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>Form Field</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <mat-form-field>
-            <input matInput placeholder="Input">
-        </mat-form-field>
+<form #f="ngForm">
+    <mat-card>
+        <mat-card-content>
+            <div>
+                <mat-form-field>
+                    <input type="text" matInput [(ngModel)]="nomeCliente" #nome="ngModel" [class.is-invalid]="nome.invalid && nome.touched"
+                        name="nome" placeholder="Nome"  required>
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput [(ngModel)]="empregoCliente" #emprego="ngModel" [class.is-invalid]="emprego.invalid && emprego.touched"
+                        name="emprego" placeholder="Emprego"  required>
+                </mat-form-field>
 
-        <mat-form-field>
-            <textarea matInput placeholder="Textarea"></textarea>
-        </mat-form-field>
-
-        <mat-form-field>
-            <mat-select placeholder="Select">
-                <mat-option value="option">Option</mat-option>
-            </mat-select>
-        </mat-form-field>
-    </mat-card-content>
-</mat-card>
-
+            </div>
+        </mat-card-content>
+        <div>
+            <button mat-raised-button color="primary" [disabled]="!f.valid">Cadastrar</button>
+        </div>
+    </mat-card>
+</form>

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule as FormModule, ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
 import {
     MatAutocompleteModule, MatCardModule, MatCheckboxModule, MatDatepickerModule,
     MatFormFieldModule, MatInputModule, MatNativeDateModule, MatRadioModule, MatSelectModule,
@@ -25,6 +26,7 @@ import { SliderComponent } from './slider/slider.component';
         MatSlideToggleModule,
         MatFormFieldModule,
         MatInputModule,
+        MatButtonModule,
         MatCardModule,
         MatCheckboxModule,
         MatRadioModule,
@@ -36,12 +38,12 @@ import { SliderComponent } from './slider/slider.component';
         FlexLayoutModule.withConfig({addFlexToParent: false})
     ],
     declarations: [
-        FormsComponent,
-        CheckboxComponent,
-        DatePickerComponent,
+         FormsComponent,
+         CheckboxComponent,
+         DatePickerComponent,
         FormFieldComponent,
-        SliderComponent,
-        AutoCompleteComponent
+         SliderComponent,
+         AutoCompleteComponent
     ]
 })
 export class FormsModule {}

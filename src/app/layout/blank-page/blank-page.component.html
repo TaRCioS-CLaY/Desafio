@@ -1,0 +1,17 @@
+<form >
+    <table matSort (matSortChange)="sortData($event)">
+        <tr>
+          <th mat-sort-header="id">ID</th>
+          <th mat-sort-header="nome">Nome</th>
+          <th mat-sort-header="sobrenome">Sobrenome</th>
+          <th mat-sort-header="foto">Foto</th>
+        </tr>
+      
+        <tr *ngFor="let pessoa of bancoPessoas">
+          <td>{{pessoa.id}}</td>
+          <td>{{pessoa.nome}}</td>
+          <td>{{pessoa.sobrenome}}</td>
+          <td>{{pessoa.foto}}</td>
+        </tr>
+      </table>
+</form>

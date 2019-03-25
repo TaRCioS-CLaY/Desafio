@@ -38,7 +38,7 @@ const routes: Routes = [
                 loadChildren: './tables/tables.module#TablesModule'
             },
             {
-                path: 'blank-page',
+                path: 'listar',
                 loadChildren: './blank-page/blank-page.module#BlankPageModule'
             }
         ]

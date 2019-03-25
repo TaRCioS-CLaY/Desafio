@@ -1,8 +1,8 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { NgModule } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
 import {
-    MatButtonModule,
     MatIconModule,
     MatListModule,
     MatSidenavModule,
@@ -36,6 +36,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         LayoutModule,
         OverlayModule,
         HttpClientModule,
+        MatButtonModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
